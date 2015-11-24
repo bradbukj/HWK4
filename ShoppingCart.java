@@ -1,3 +1,11 @@
+/*
+* Names:     	   Kristina Bradbury	Emilio Hajj	Jim Wu
+* MacIDs: 	   bradbukj	 	hajje		wuzz
+* Student Numbers: 1405897		1402245		Please see submission comment
+* Description: A class that calls on several public methods to create a unique shopping caret for each user and populate it with all items
+		user selects for purchase, and empties it upon purchase or logout.
+*/
+
 package Shopping;
 import java.io.*;
 import java.util.Date;
