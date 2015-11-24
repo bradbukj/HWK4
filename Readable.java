@@ -1,3 +1,10 @@
+/*
+* Names:     	   Kristina Bradbury	Emilio Hajj	Jim Wu
+* MacIDs: 	   bradbukj	 	hajje		wuzz
+* Student Numbers: 1405897		1402245		Please see submission comment
+* Description: A class that calls on public method that retrieves all information on readable items for purchase.
+*/
+
 package Shopping;
 
 public class Readable extends Item {
