@@ -7,8 +7,8 @@ public class User {
 	
 	//method to get username
 	public String getUsername(Scanner reader){
-		username = reader.next();
-		return username;
+		username = reader.next(); //save next user input to sting called username
+		return username; //get username
 	}
 	/*public String getPassword()
 	{
