@@ -30,7 +30,7 @@ public class ShoppingCart extends User{
 			//Write product info to cart file for user
 			FileWriter fileWriter = new FileWriter("Cart_" + username + ".txt", true);
 			BufferedWriter bw = new BufferedWriter(fileWriter);
-			bw.write(sNo + ", " + prodName + ", " + dateFormat.format(date) + ", " + quantity + "\n"); //Populate cart
+			bw.write("\n" + sNo + ", " + prodName + ", " + dateFormat.format(date) + ", " + quantity ); //Populate cart
 			bw.close();
 			
 		}catch (IOException e){
