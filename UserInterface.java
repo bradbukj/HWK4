@@ -351,19 +351,19 @@ public class UserInterface {
 	//show audio menu
 	public void showAudioProducts()
 	{
-		System.out.print("S.No   Name          Artist   Price($)  Quantity  Type\n");
+		System.out.print("S.No\tName\t\tArtist\tPrice($)\tQuantity\tType\n");
 		for(int i = 0; i< cd.length; i++)//goes through array
 		{
 			if (cd[i].sNo != 0)//if blank, don't display
 			{
-				System.out.print(cd[i].getInfo() + "       CD\n");//display cd
+				System.out.print(cd[i].getInfo() + "\t\tCD\n");//display cd
 			}
 		}
 		for(int i = 0; i< mp3.length; i++)//goes through array
 		{
 			if (mp3[i].sNo != 0)//if blank, don't display
 			{
-				System.out.print(mp3[i].getInfo() + "       MP3\n");//display mp3
+				System.out.print(mp3[i].getInfo() + "\t\tMP3\n");//display mp3
 			}
 		}
 		getAudio();
