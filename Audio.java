@@ -4,7 +4,7 @@ public class Audio extends Item{
 	protected String artistName;
 	public String getInfo()
 	{
-		String info = sNo + ",    " + name + ",    " + artistName + ", " + price + ", " + quantity;//formats info
+		String info = sNo + ",\t" + name + ",\t\t" + artistName + ",\t" + price + ",\t" + quantity+"\t";//formats info
 		return info;//returns info
 	}
 	public void setParam(String info)//splits info into class variables
