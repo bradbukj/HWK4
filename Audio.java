@@ -1,3 +1,11 @@
+/*
+* Names:     	   Kristina Bradbury	Emilio Hajj	Jim Wu
+* MacIDs: 	   bradbukj	 	hajje		wuzz
+* Student Numbers: 1405897		1402245		???????
+* Description: This file contains all information and fuctions relevent to audio files.
+*/
+
+
 package Shopping;
 
 public class Audio extends Item{
