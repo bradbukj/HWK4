@@ -378,7 +378,7 @@ public class UserInterface {
 				file.createNewFile(); //if no cart exists for user, create one
 			}
 		}catch (IOException e){
-			e.printStackTrace();
+			e.printStackTrace(); //catch exceptions
 		}
 		try (BufferedReader br = new BufferedReader(new FileReader("ConID.txt")))
 		{
@@ -412,39 +412,39 @@ public class UserInterface {
 	//checkout function
 	public void checkOut()
 	{
-		System.out.print("Billing Information:\n  Name \t\t\tQuantity\t\tPrice");
+		System.out.print("Billing Information:\n  Name \t\t\tQuantity\t\tPrice"); //Print headers
 		for(int i = 0; i < 100; i++)
 		{
-			if (cart.getName(i) != null)
+			if (cart.getName(i) != null) //if item exists in cart
 			{
-				System.out.print("\n" + cart.getName(i) +"\t\t\t" + cart.getQuantity(i));
+				System.out.print("\n" + cart.getName(i) +"\t\t\t" + cart.getQuantity(i)); //print name of item and quantity in 'table' under headers for each line (entry in array)
 			}
 		}
-		System.out.print("\n  Subtotal \t\t \t\t" + subtotal);
-		System.out.print("\nEvironment Tax \t\t 2%\t\t" + eTax);
-		System.out.print("\n  HST \t\t 13% \t\t" + HST);
-		System.out.print("\nShipping \t\t 10% \t\t" + Shipping);
-		System.out.print("\n\t\t \t\t _________");
-		System.out.print("\nTotal \t\t\t\t" + (subtotal+eTax+Shipping+HST));
+		System.out.print("\n  Subtotal \t\t \t\t" + subtotal); //in new line, print subtotal
+		System.out.print("\nEvironment Tax \t\t 2%\t\t" + eTax); //in new line print environmental tax total
+		System.out.print("\n  HST \t\t 13% \t\t" + HST); //in new line print HST total
+		System.out.print("\nShipping \t\t 10% \t\t" + Shipping); //in new line pring shipping total
+		System.out.print("\n\t\t \t\t _________"); //in new line, print horizontal line to add everything
+		System.out.print("\nTotal \t\t\t\t" + (subtotal+eTax+Shipping+HST)); //in new line, print grand total
 		
-		System.out.print("\nDo you want to pay? Yes or No: ");
-		String input = reader.next();
-		if (input.equals("Yes")||input.equals("yes")||input.equals("yEs")||input.equals("YEs")||input.equals("YES")||input.equals("YeS")||input.equals("yES")||input.equals("yeS"))
+		System.out.print("\nDo you want to pay? Yes or No: "); //prompt user to pay
+		String input = reader.next(); //record the next user input in a string called input
+		if (input.equals("Yes")||input.equals("yes")||input.equals("yEs")||input.equals("YEs")||input.equals("YES")||input.equals("YeS")||input.equals("yES")||input.equals("yeS")) //if user inputs yes, case-insensitive
 		{
-			System.out.print("\nConfirmation ID: U100" + ID );
-			System.out.print("\nShipping to: " + username);
-			cart.clearCart(username);
+			System.out.print("\nConfirmation ID: U100" + ID ); //print uniqe confirmation ID
+			System.out.print("\nShipping to: " + username); //print the name of the user purchasing
+			cart.clearCart(username); //clear the cart of the user after the purchase
 			//updateID();
-			mainMenu();
+			mainMenu(); //return user to main menu
 		}
-		else if (input.equals("No")||input.equals("no")||input.equals("nO")||input.equals("NO"))
+		else if (input.equals("No")||input.equals("no")||input.equals("nO")||input.equals("NO")) //if user inputs no, case-insensitive
 		{
-			categoryMenu();
+			categoryMenu(); //return to purchasing menu options
 		}
 		else
 		{
-			System.out.print("\nInvalid");
-			checkOut();
+			System.out.print("\nInvalid"); //if user inputs anything other than yes or no, print 'Invalid'
+			checkOut(); //restart checkout
 		}
 	}
 	
