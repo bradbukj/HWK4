@@ -1,8 +1,8 @@
 /*
 * Names:     	   Kristina Bradbury	Emilio Hajj	Jim Wu
 * MacIDs: 	   bradbukj	 	hajje		wuzz
-* Student Numbers: 1405897		1402245		???????
-* Description: This file contains all information and fuctions relevent to audio files.
+* Student Numbers: 1405897		1402245		Please see submission comment
+* Description: A class that calls on a public method that retrieves all information on audio files for purchase.
 */
 
 
