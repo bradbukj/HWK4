@@ -11,7 +11,7 @@ public class ShoppingCart extends User{
 	
 	public String getContent()
 	{
-		return content;
+		return content; //get contents of content
 	}
 	
 	//Add selected items to user's cart
@@ -28,13 +28,13 @@ public class ShoppingCart extends User{
 			}
 			
 			//Write product info to cart file for user
-			FileWriter fileWriter = new FileWriter("Cart_" + username + ".txt", true);
+			FileWriter fileWriter = new FileWriter("Cart_" + username + ".txt", true); //sets new file (user's cart) to write to
 			BufferedWriter bw = new BufferedWriter(fileWriter);
 			bw.write("\n" + sNo + ", " + prodName + ", " + dateFormat.format(date) + ", " + quantity ); //Populate cart
-			bw.close();
+			bw.close(); //close file
 			
 		}catch (IOException e){
-			e.printStackTrace();
+			e.printStackTrace(); //catches exceptions
 		}
 		
 		//Add product name and quantity to prodNames and quantities arrays, respectively
@@ -59,27 +59,27 @@ public class ShoppingCart extends User{
 		DateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy"); //Set date format
 		Date date = new Date(); //Get current date with Date()
 		
-		content = content + sNo + ", " + prodName + ", " + dateFormat.format(date) + ", " + quantity + "\n";
+		content = content + sNo + ", " + prodName + ", " + dateFormat.format(date) + ", " + quantity + "\n"; //add new line of cart info to content
 	}
 	
 	//clear cart_username.txt file
 	public void clearCart(String username)
 	{
 		try	{
-			PrintWriter pw = new PrintWriter("Cart_" + username + ".txt");
-			pw.close();
+			PrintWriter pw = new PrintWriter("Cart_" + username + ".txt"); //sets new file to clear
+			pw.close(); //close file
 		}catch (IOException e){
-			e.printStackTrace();
+			e.printStackTrace(); //catch exceptions
 		}
 	}	
 	
 	public String getName(int i)
 	{
-		return prodNames[i];
+		return prodNames[i]; //get array element (name of product)
 	}
 	
 	public int getQuantity(int i)
 	{
-		return quantities[i];
+		return quantities[i]; //get arrary element (quantity of product)
 	}
 }
