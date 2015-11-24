@@ -1,3 +1,10 @@
+/*
+* Names:     	   Kristina Bradbury	Emilio Hajj	Jim Wu
+* MacIDs: 	   bradbukj	 	hajje		wuzz
+* Student Numbers: 1405897		1402245		Please see submission comment
+* Description: A class that gets all information for all items for purchase.
+*/
+
 package Shopping;
 public abstract class Item {
 	public abstract String getInfo();//get item info
