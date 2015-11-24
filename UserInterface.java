@@ -1,3 +1,11 @@
+/*
+* Names:     	   Kristina Bradbury	Emilio Hajj	Jim Wu
+* MacIDs: 	   bradbukj	 	hajje		wuzz
+* Student Numbers: 1405897		1402245		Please see submission comment
+* Description: A class that calls several public methods to read files, initialize content from files, allow users to log in and create usernames,
+		displays a user interface for a user to navigate, and to checkout.
+*/
+
 package Shopping;
 import java.util.Arrays;
 import java.util.Scanner;
