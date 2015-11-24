@@ -1,7 +1,7 @@
 /*
 * Names:     	   Kristina Bradbury	Emilio Hajj	Jim Wu
 * MacIDs: 	   bradbukj	 	hajje		wuzz
-* Student Numbers: 1405897		1402245		???????
+* Student Numbers: 1405897		1402245		Please see submission comment
 * Description: A class that calls a public method for retrieving the price of a book 
 */
 package Shopping;
