@@ -167,7 +167,7 @@ public class UserInterface {
 	//function for category menu
 	public void categoryMenu()
 	{
-		System.out.print("1.Readables\n2. audio\n-1 to go to previous menu\nEnter Command:");//dislay menu
+		System.out.print("1. Readables\n2. Audio\n--> -1 to go to previous menu\nEnter Command:");//dislay menu
 		int userInput = reader.nextInt();//get input
 		//process input
 		if(userInput == 1)
@@ -329,19 +329,19 @@ public class UserInterface {
 	//readables menu
 	public void showReadables()
 	{
-		System.out.print("S.No   Name of Book       Author         Price($)       Quantity in Store    Type\n");//format
+		System.out.print("S.No\tName of Book\t\tAuthor\tPrice($)\tQuantity in Store\tType\n");//format
 		for(int i = 0; i < book.length; i++)//goes through array
 		{
 			if (book[i].sNo != 0)//if blank, don't display
 			{
-				System.out.print(book[i].getInfo() + "       Book\n");//display books 
+				System.out.print(book[i].getInfo() + "\t\tBook\n");//display books 
 			}
 		}
 		for(int i = 0; i< eBook.length; i++)//goes through array
 		{
 			if (eBook[i].sNo != 0)//if blank, don't display
 			{
-				System.out.print(eBook[i].getInfo() + "       eBook\n");//displays ebooks
+				System.out.print(eBook[i].getInfo() + "\t\teBook\n");//displays ebooks
 			}
 		}
 		getReadables();//go to purchase function
